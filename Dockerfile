@@ -16,12 +16,13 @@ EXPOSE 8080
 
 WORKDIR ${APP_ROOT}
 
-COPY app.jar app.jar
-
-RUN chown -R 1001:0 ${APP_ROOT} && \
+RUN mkdir -p ${APP_ROOT} && \
+  chown -R 1001:0 ${APP_ROOT} && \
   chmod -R g=u ${APP_ROOT} && \
   echo "/usr/bin/java -jar ${APP_ROOT}/app.jar" > /run.sh && \
   chmod 770 /run.sh
+
+COPY --chown=1001:0 app.jar app.jar
 
 USER 1001:0
 
