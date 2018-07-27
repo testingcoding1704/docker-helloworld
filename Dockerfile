@@ -8,7 +8,7 @@ ENV APP_ROOT=/opt/app-root \
 LABEL version="${VERSION}" \
   description="\
 This is basic docker image for Hello World application. \
-To start: `docker run -it --rm -p8080:8080 testingcoding1704/docker-helloworld`. \
+To start: `docker run -it --rm -p8080:8080 testingcoding1704/docker-helloworld:${VERSION}`. \
 To verify: `curl localhost:8080`. \
 "
 
