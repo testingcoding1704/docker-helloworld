@@ -4,6 +4,5 @@ target
 .idea
 *.iml
 
-#Application archives and files
-*.tar.gz
-*.jar
+#Application jar file
+app.jar
