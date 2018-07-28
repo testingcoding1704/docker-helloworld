@@ -2,8 +2,10 @@ FROM openjdk:8-jre-alpine
 
 MAINTAINER Testing Coding <testingcoding1704@gmail.com>
 
-ENV APP_ROOT=/opt/app-root \
-  VERSION=latest
+ENV APP_ROOT=/opt/app-root
+
+ARG VERSION=latest
+ENV VERSION=${VERSION}
 
 LABEL version="${VERSION}" \
   description="\

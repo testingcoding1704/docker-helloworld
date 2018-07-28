@@ -24,3 +24,12 @@ docker run -it --rm -p8080:8080 docker-helloworld
 # Verify
 curl localhost:8080
 ````
+
+
+## Create additional versions - internal use only
+````sh
+VERSION=latest && docker build --build-arg=VERSION=${VERSION} -t testingcoding1704/docker-helloworld:${VERSION} .
+VERSION=v1 && docker build --build-arg=VERSION=${VERSION} -t testingcoding1704/docker-helloworld:${VERSION} .
+VERSION=v2 && docker build --build-arg=VERSION=${VERSION} -t testingcoding1704/docker-helloworld:${VERSION} .
+VERSION=v3 && docker build --build-arg=VERSION=${VERSION} -t testingcoding1704/docker-helloworld:${VERSION} .
+````
